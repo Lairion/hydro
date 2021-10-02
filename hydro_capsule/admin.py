@@ -11,6 +11,9 @@ from hydro_capsule.models import (
 )
 
 
+class SlotInLine(admin.TabularInline):
+    model = Slot
+
 class FertilizerInRuleInLine(admin.TabularInline):
     model = FertilizerInRule
 
@@ -21,7 +24,7 @@ class FertilizerInSlotInLine(admin.TabularInline):
 
 @admin.register(Capsule)
 class CapsuleAdmin(admin.ModelAdmin):
-    pass
+    inlines = [SlotInLine]
 
 
 @admin.register(PlantType)

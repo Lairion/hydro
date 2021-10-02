@@ -17,7 +17,7 @@ class Capsule(NamedEntry):
     slots_count = models.PositiveIntegerField()
     power = models.FloatField()
     radiation = models.FloatField()
-    temprature = models.FloatField()
+    temperature = models.FloatField()
     went_speed = models.FloatField()
 
 
@@ -84,7 +84,7 @@ class FertilizerInSlot(models.Model):
 
 class FertilizerInRule(models.Model):
 
-    how_mutch = models.FloatField()
+    how_much = models.FloatField()
     grow_rule = models.ForeignKey(
         "hydro_capsule.GrowRule",
         on_delete=models.CASCADE,

@@ -18,6 +18,7 @@ class Capsule(NamedEntry):
     power = models.FloatField()
     radiation = models.FloatField()
     temprature = models.FloatField()
+    went_speed = models.FloatField()
 
 
 class PlantType(NamedEntry):
@@ -62,7 +63,7 @@ class Fertilizer(NamedEntry):
     pass
 
 
-class FertilizerInSlot(NamedEntry):
+class FertilizerInSlot(models.Model):
 
     capacity = models.FloatField()
     fertilizer = models.ForeignKey(
@@ -81,7 +82,7 @@ class FertilizerInSlot(NamedEntry):
     )
 
 
-class FertilizerInRule(NamedEntry):
+class FertilizerInRule(models.Model):
 
     how_mutch = models.FloatField()
     grow_rule = models.ForeignKey(

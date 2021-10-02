@@ -17,6 +17,7 @@ class Capsule(NamedEntry):
     slots_count = models.PositiveIntegerField()
     power = models.FloatField()
     radiation = models.FloatField()
+    temprature = models.FloatField()
 
 
 class PlantType(NamedEntry):

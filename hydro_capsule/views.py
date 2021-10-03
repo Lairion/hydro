@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 
 def home(request):
-    return render(request, "hydro_capsule\templates\hydro_capsule\index.html", {})
+    return render(request, "templates\index.html", {})

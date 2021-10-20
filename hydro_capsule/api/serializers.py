@@ -27,6 +27,7 @@ class PlantTypeSerializer(ModelSerializer):
 
 
 class PlantSerializer(ModelSerializer):
+    plant_type = PlantTypeSerializer()
 
     class Meta:
         model = Plant
@@ -62,6 +63,8 @@ class FertilizerInRuleSerializer(ModelSerializer):
 
 
 class FertilizerInSlotSerializer(ModelSerializer):
+
+    fertilizer = FertilizerSerializer()
 
     class Meta:
         model = FertilizerInSlot

@@ -22,6 +22,7 @@ class Capsule(NamedEntry):
 
 
 class PlantType(NamedEntry):
+    image = models.ImageField("plant_types_image/", null=True)
     description = models.TextField()
 
 
@@ -80,6 +81,7 @@ class FertilizerInSlot(models.Model):
         blank=True,
         related_name="fertilizers_in_slot"
     )
+    is_turn_on = models.BooleanField(default=False)
 
 
 class FertilizerInRule(models.Model):

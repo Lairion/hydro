@@ -1,5 +1,5 @@
 from django.urls import path, include
-from rest_framework.routers import DefaultRouter
+from rest_framework.routers import SimpleRouter
 from hydro_capsule.api.views import (
     CapsuleViewSet,
     PlantTypeViewSet,
@@ -11,7 +11,7 @@ from hydro_capsule.api.views import (
     FertilizerInSlotViewSet
 )
 
-router = DefaultRouter()
+router = SimpleRouter()
 
 router.register("capsules", CapsuleViewSet)
 router.register("plant_types", PlantTypeViewSet)

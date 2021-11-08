@@ -41,13 +41,6 @@ class GrowRuleSerializer(ModelSerializer):
         fields = "__all__"
 
 
-class SlotSerializer(ModelSerializer):
-
-    class Meta:
-        model = Slot
-        fields = "__all__"
-
-
 class FertilizerSerializer(ModelSerializer):
 
     class Meta:
@@ -68,4 +61,13 @@ class FertilizerInSlotSerializer(ModelSerializer):
 
     class Meta:
         model = FertilizerInSlot
+        fields = "__all__"
+
+
+class SlotSerializer(ModelSerializer):
+
+    fertilizers_in_slot = FertilizerInSlotSerializer(many=True)
+
+    class Meta:
+        model = Slot
         fields = "__all__"
